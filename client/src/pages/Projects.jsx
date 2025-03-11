@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
-import { projects } from '../data/projectsData';
+import { projects } from '../pages/projectsData';
 import Wrapper from '../assets/wrappers/Porjects';
 
 const Projects = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { projects } from '../data/projectsData';
+import { projects } from '../utils/projectsData';
 import Wrapper from '../assets/wrappers/SingleProject';
 import { FaGithub, FaExternalLinkAlt, FaArrowLeft } from 'react-icons/fa';
 
