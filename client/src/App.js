@@ -7,6 +7,14 @@ import {
   Error,
   Projects,
   SingleProject,
+  AdminLayout,
+  Login,
+  HomeManagement,
+  AboutManagement,
+  ProjectsManagement,
+  ContactManagement,
+  MessagesManagement,
+  DashboardLayout,
 } from "./pages";
 
 // Create router configuration
@@ -35,6 +43,43 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />,
+      },
+    ],
+  },
+  {
+    path: "/admin",
+    element: <AdminLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        index: true,
+        element: <Login />,
+      },
+      {
+        path: "dashboard",
+        element: <DashboardLayout />,
+        children: [
+          {
+            path: "homeManagement",
+            element: <HomeManagement />,
+          },
+          {
+            path: "homeManagement",
+            element: <AboutManagement />,
+          },
+          {
+            path: "homeManagement",
+            element: <ProjectsManagement />,
+          },
+          {
+            path: "homeManagement",
+            element: <ContactManagement />,
+          },
+          {
+            path: "homeManagement",
+            element: <MessagesManagement />,
+          },
+        ],
       },
     ],
   },
